@@ -1,0 +1,6 @@
+[cmd_duration]
+min_time = 5000 # ms
+
+[directory]
+truncation_length=100
+truncate_to_repo=false

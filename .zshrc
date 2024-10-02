@@ -25,6 +25,18 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 
+setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE  # don't put duplicate lines or lines starting with space in the history.
+setopt auto_cd              #一致するディレクトリに cdなしで移動できる
+setopt correct              #コマンドのスペルを修正(正しい可能性のある候補を表示)
+setopt correct_all          #コマンドラインの引数のスペルを修正
+setopt hist_ignore_dups     #直前と同じコマンドは履歴に追加しない
+setopt share_history        #他のzshで履歴を共有する
+setopt inc_append_history #即座に履歴を保存する
+setopt always_last_prompt # 補完でプロンプト位置を保持
+setopt auto_list # 曖昧補完
+setopt auto_menu # 補完キー（Tab）連打で補完を順に表示
+setopt auto_param_keys # カッコなどを補完
+
 # editor
 export EDITOR=/usr/bin/vi
 
@@ -32,6 +44,7 @@ export EDITOR=/usr/bin/vi
 # export PJ_ROOT=
 
 # sheldon
+setopt EXTENDED_GLOB
 eval "$(sheldon source)"
 
 # prezto

@@ -24,11 +24,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-# don't put duplicate lines or lines starting with space in the history.
-setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE
-
-# Configure direnv
-eval "$(direnv hook bash)"
 
 # editor
 export EDITOR=/usr/bin/vi
@@ -37,7 +32,6 @@ export EDITOR=/usr/bin/vi
 # export PJ_ROOT=
 
 # sheldon
-setopt EXTENDED_GLOB
 eval "$(sheldon source)"
 
 # prezto

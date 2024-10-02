@@ -30,12 +30,6 @@ setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE
 # Configure direnv
 eval "$(direnv hook bash)"
 
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-
-# GOROOT, GOPATHはgoコマンド内部でしか使用しないので設定不要
-export PATH="/usr/local/go/bin:$HOME/go/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-
 # editor
 export EDITOR=/usr/bin/vi
 
